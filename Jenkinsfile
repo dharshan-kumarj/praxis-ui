@@ -46,7 +46,8 @@ pipeline {
             steps {
                 sh """
                 ssh -o StrictHostKeyChecking=no $VM_USER@$VM_IP \
-                '/home/azureuser/deploy_openwebui.sh'
+                '/opt/openwebui/deploy.sh
+'
                 """
             }
         }
