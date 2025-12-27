@@ -45,9 +45,7 @@ pipeline {
         stage('Deploy to Azure VM') {
             steps {
                 sh """
-                ssh -o StrictHostKeyChecking=no $VM_USER@$VM_IP \
-                '/opt/openwebui/deploy.sh
-'
+                ssh azureuser@74.225.196.70 /opt/openwebui/deploy.sh
                 """
             }
         }
