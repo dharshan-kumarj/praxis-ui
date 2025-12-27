@@ -53,6 +53,9 @@ pipeline {
     }
 
     post {
+        always {
+            sh 'docker system prune -af'
+        }
         success {
             echo "CI + CD completed successfully"
             sh "docker system prune -af"
